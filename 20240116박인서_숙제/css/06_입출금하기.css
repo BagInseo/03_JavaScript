@@ -1,0 +1,58 @@
+.content {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 460px;
+}
+
+.row1 {
+  border: 2px solid red;
+  color: red;
+  margin: 20px 25px;
+  height: 90px;
+  width: 400px;
+  font-size: 20px;
+  display: flex;
+}
+.row2 {
+  border: 2px solid blue;
+  color: blue;
+  margin: 20px 25px;
+  height: 90px;
+  width: 400px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+}
+
+h2 {
+  margin: auto;
+}
+
+.row2 input {
+  font-size: 20px;
+  border: 0cap;
+}
+.sumbox {
+  border: 2px solid blue;
+  font-size: 20px;
+  font-weight: bold;
+  margin: auto;
+  display: inline;
+}
+
+.row3 {
+  margin: 20px 25px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.row3 .button {
+  border: 2px solid green;
+  color: green;
+  height: 90px;
+  width: 200px;
+  font-size: 30px;
+  font-weight: bold;
+}
