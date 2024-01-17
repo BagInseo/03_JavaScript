@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+
+    <button onclick="check1()">for문을 이용해 배열에 저장된 값 하나씩 순서대로 출력</button>
+    <button onclick="check2()">for문을 이용해 요소 초기화 후 요소 출력</button>
+
+    <hr>
+<div>
+    <h2>점심 메뉴 뽑기</h2>
+    <h4>오늘의 점심은: <span id="menuResult" style="color: cornflowerblue;"></span></h4>
+
+    <button onclick="selectMenu()">점심 메뉴 뽑기</button>
+    
+</div>
+
+<hr>
+
+
+<h3>음식 주문하기</h3>
+<div>
+    <button onclick="orderFn()">주문하기</button>
+
+    <table border="1">
+        <caption>주문 내역</caption>
+        
+        <thead>
+            <tr>
+                <th>메뉴명</th>                    
+                <th>가격</th>                    
+                <th>수량</th>                   
+            </tr>
+        </thead>
+
+        <tbody id="tbody">
+            <tr>
+                <td>김밥</td>
+                <td>3000</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>라면</td>
+                <td>4000</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th>합계</th>
+                <th colspan="2" id="total"></th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+    
+
+
+
+    <script src="../js/test.js"></script>
+</body>
+</html>
