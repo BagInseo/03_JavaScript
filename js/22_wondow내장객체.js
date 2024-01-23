@@ -63,3 +63,49 @@ stop3.addEventListener("click",()=>{
 
 });
 
+
+
+
+/* 새탭에서  열기 */
+const openpopup1=document.querySelector("#openPopup1");
+openpopup1.addEventListener("click",()=>{
+    window.open("23_스톱워치.html");
+
+    //<a href="23_스톱워치.html" target="_blank"></a>
+});
+
+/* 팝업 */
+const openpopup2=document.querySelector("#openPopup2");
+openpopup2.addEventListener("click",()=>{
+    window.open("23_스톱워치.html","_blank","popup");
+});
+
+
+/* 팝업창 + 옵션 */
+const openpopup3=document.querySelector("#openPopup3");
+openpopup3.addEventListener("click",()=>{
+    let options=[];
+    options.push("width=400");
+    options.push("height=450");
+    options.push("left=500");
+    options.push("top=100");
+
+    // [].toStirng : "요소, 요소, 요소"(문자열로 변환)
+    //  -> 배열 내 요소를 ,를 
+    window.open("23_스톱워치.html","_blank", options.toString());
+});
+
+
+
+const openPopup4 =document.querySelector("#openPopup4");
+
+openPopup4.addEventListener("click",() => {
+    const options=[];
+
+    options.push("width=600");
+    options.push("height=300");
+    options.push("left=500");
+    options.push("top=100");
+
+    window.open("22_팝업창.html","_blank", options.toString());
+})

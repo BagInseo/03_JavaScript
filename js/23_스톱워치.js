@@ -14,17 +14,36 @@ let count=0; //1/100초마다 1씩 증가한 값을 저장할 변수
 
 let currInterval; //인터벌 저장 변수
 
+/* if(count==0){
+    recordBtn.disabled=true;
+}
+else{recordBtn.disabled=false};
+ */
 
 /* start 버튼 클릭 시 10ms 마다 display(시간)을 증가 */
 startBtn.addEventListener("click",(e)=>{
+
+    //클릭한 버튼의 작성된 내용이 "PAUSE"인 경우(일시정지)
+    if(e.target.textContent=="PAUSE") {
+        e.target.textContent="START";
+        window.clearInterval(currInterval);
+        return;
+    }
+
+    //클릭한 버튼의 작성된 내용이 "START인 경우"
     currInterval=window.setInterval(()=>{
 
         count++; //count 1증가
         output(); //화면에 시간 출력
         //document.querySelectorAll("#display > span")[2].innerText=count;
+        
     },10);//10ms
+
+    e.target.textContent="PAUSE";
+
     
-    e.target.disabled=true;
+
+
 });
 
 /* 시계 출력 함수 */
@@ -65,7 +84,7 @@ function attachZero(num){
 
 
 //-------------------------------------------------------------------------------
-/* reset 버튼이 클릭 되었을 때 */
+/* RESET 버튼이 클릭 되었을 때 */
 
 resetBtn.addEventListener("click", () => {
 
@@ -76,6 +95,35 @@ resetBtn.addEventListener("click", () => {
     count=0;
     output();
 
-    startBtn.disabled=false; //startBtn 활성화
+   //다시 START버튼의 내용을 START로 변경
+   startBtn.textContent="START";
+
+   // #recordContainer의 내용을 모두 삭제
+   recordContainer.innerHTML="";
+
+});
+
+
+
+/* 요소.textContent와 요소.innerText */
+//textContent를 이용해 요소에 작성된 내용 얻어오기
+// -> HTML 파일에 작성된 내용 형태 (단, 태그 뺴고) 그대로 얻어옴
+//(띄어쓰기, 엔터 모두 포함)
+
+//innerText를 이용해 요소에 작성된 내용 얻어어기
+// 브라우저 화면에 보이는 형태를 (단, 태그 뺴고) 얻어옴
+
+
+
+
+//---------------------------------------------------------------
+/* RECORD 버튼이 클릭 되었을 때 */
+
+recordBtn.addEventListener("click",()=>{
+    const li=document.createElement("li");
+    li.textContent=display.innerText;
+    recordContainer.prepend(li);
+
+    console.log(li);
 
 })
