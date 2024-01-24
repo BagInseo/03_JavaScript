@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/30_설정적용.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <div>
+        <div ><h4>너비:</h4> <input type="number" class="input" id="width">px</div>
+        <div ><h4>높이: </h4><input type="number" class="input" id="height">px</div>
+        </div>
+
+        <div>
+        <div><h4>글자크기: </h4><input type="number" class="input" id="textSize">px</div>
+
+        <div><h4>굵기: </h4>
+            보통<input type="radio" name="textWeight" value="normal">
+            굵게<input type="radio" name="textWeight" value="bold"></div>
+        </div>
+        
+        <div>
+        <div><h4>글자색: </h4><input type="text" id="color">   </div>    
+        <div><h4>배경색:</h4> <input type="text" id="backgroundColor"></div>
+        </div>
+        
+        <div>
+            <h4>가로정렬:</h4>
+            왼쪽<input type="radio" name="garo" value="flex-start">
+            가운데: <input type="radio" name="garo" value="center">
+            오른쪽: <input type="radio" name="garo" value="flex-end">
+        </div>
+
+        <div>
+            <h4>세로정렬:</h4>
+            위<input type="radio" name="sero"  value="flex-start">
+            가운데: <input type="radio" name="sero"  value="center">
+            아래: <input type="radio"  name="sero" value="flex-end">
+        </div>
+       
+       
+        <div >
+            <div>
+                <h4>출력 문자열: </h4><input type="text" id="text">
+            </div>
+        </div>
+
+        <button id="btn">적용하기</button>
+
+        <div id="result"></div>
+        
+
+
+    </div>
+   
+    
+
+
+
+    <script src="../js/30_설정적용.js"></script>
+</body>
+</html>
