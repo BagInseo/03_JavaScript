@@ -3,16 +3,16 @@ const resetBtn=document.querySelector("#resetBtn");
 const output=document.querySelector("#output");
 
 
-// number.forEach((element)=>{
-//     element.addEventListener("click",()=>{
-//         console.log(element.textContent);
+number.forEach((element)=>{
+    element.addEventListener("click",()=>{
+        console.log(element.textContent);
        
-//         if(output.innerText.trim().length<10){
-//             output.innerText+=element.textContent;
-//             return;
-//         }
-//     });
-// });
+        if(output.innerText.trim().length<10){
+            output.innerText+=element.textContent;
+            return;
+        }
+    });
+});
 
 /* for(let i=0; i<numbers.length; i++){
     numbers[i].addEventListener("click",()=>{
