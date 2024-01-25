@@ -4,9 +4,10 @@ const resetBtn=document.querySelector("#reset");
 const addBtn=document.querySelector("#add");
 const list=document.querySelector(".list");
 const newListLine=document.querySelectorAll(".listLine");
-const saveNum=document.querySelector("#savedNum");
+const saveNum=document.querySelectorAll(".savedNum");
 const starBtn=document.querySelector(".star");
 const deleteBtn=document.querySelector(".delete");
+const eBtn=document.querySelector("#eraser");
 
 
 /* 번호 입력 */
@@ -14,6 +15,13 @@ numbers.forEach(element => {
     element.addEventListener("click",() =>{
         // console.log(element.textContent);
         numberInput.textContent+=element.textContent;
+        let num=numberInput.textContent;
+
+      /*   let outputNum=num.replace(/[^0-9]/g, '')
+        .replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3").replace(/(\-{1,2})$/g, "");
+
+        console.log(outputNum);
+        numberInput.textContent=outputNum; */
     })
 });
 
@@ -49,8 +57,8 @@ addBtn.addEventListener("click",()=>{
     if(newNum.textContent.trim().length>0){
         newListLine.append(newNum,sBtn,dBtn);
         list.append(newListLine);
-    }
-
+    } 
+    
     //즐겨찾기 버튼 누른 경우()
     sBtn.addEventListener("click",() => {
 
@@ -72,6 +80,13 @@ addBtn.addEventListener("click",()=>{
 
     //누적된 클릭한 번호 지우기
     numberInput.textContent="";
-})
+});
 
+
+/* 지우기 버튼 */
+eBtn.addEventListener("click",()=>{
+    let str=numberInput.textContent;
+    const e_str=str.slice(0,-1);
+    numberInput.textContent=e_str;
+});
 
